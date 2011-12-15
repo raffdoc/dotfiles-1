@@ -1,0 +1,15 @@
+fontName = "Inconsolata" 
+fontSize = 14 
+
+softWrap = true
+tabSize = 4 
+softTabs = true 
+
+excludeFiles = "*.{so,pyc,o}" 
+excludeDirectories = "{build,dist,*.egg-info}"
+includeFiles = ".gitignore"
+
+TM_GIT = "/usr/local/git/bin/git"
+
+[ source.python ]
+TM_PYCHECKER = pylint
