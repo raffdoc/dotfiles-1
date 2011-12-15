@@ -1,0 +1,17 @@
+[user]
+	name = Chris Fonnesbeck
+	email = chris.fonnesbeck@vanderbilt.edu
+
+[alias]
+    co = checkout
+    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+[color]
+	ui = auto
+[difftool "Kaleidoscope"]
+	cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
+[difftool]
+	prompt = false
+[diff]
+	tool = Kaleidoscope
+[core]
+	editor = mate -w
