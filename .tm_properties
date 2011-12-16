@@ -11,5 +11,7 @@ includeFiles = ".gitignore"
 
 TM_GIT = "/usr/local/git/bin/git"
 
+PATH = "$PATH:/usr/local/git/bin:/usr/texbin"
+
 [ source.python ]
 TM_PYCHECKER = pylint
