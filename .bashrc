@@ -40,4 +40,3 @@ PS1="${CYAN}\h:\w\n${WHITE}[\!] ${YELLOW}\$(date +%I:%M:%S) \u${WHITE}:${CYAN}\$
 alias ipy='ipython qtconsole --pylab=inline'
 
 export EDITOR LESSEDIT TEXEDIT PS1 GIT_PS1_SHOWDIRTYSTATE PATH #MACOSX_DEPLOYMENT_TARGET CFLAGS ARCHFLAGS
-source ~/.cinderella.profile
