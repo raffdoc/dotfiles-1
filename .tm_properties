@@ -1,17 +1,29 @@
-fontName = "Inconsolata" 
-fontSize = 14 
+# Universal settings
+fontName           = "Inconsolata" 
+fontSize           = 14 
 
-softWrap = true
-tabSize = 4 
-softTabs = true 
+softWrap           = true
+tabSize            = 4 
+softTabs           = true 
 
-excludeFiles = "*.{so,pyc,o}" 
+excludeFiles       = "*.{so,pyc,o}" 
 excludeDirectories = "{build,dist,*.egg-info}"
-includeFiles = ".gitignore"
+includeFiles       = ".gitignore"
 
-TM_GIT = "/usr/local/git/bin/git"
+TM_GIT             = "/usr/local/git/bin/git"
 
-PATH = "$PATH:/usr/local/git/bin:/usr/texbin"
+PATH               = "$PATH:/usr/local/git/bin:/usr/texbin"
 
+# File-specific configurations
 [ source.python ]
-TM_PYCHECKER = pylint
+TM_PYCHECKER       = pylint
+
+[ .git/COMMIT_EDITMSG ]
+spellChecking      = true
+spellingLanguage   = 'en'
+
+[ *.{icns,ico,jpg,jpeg,m4v,nib,pdf,png,psd,pyc,rtf,tif,tiff,xib} ]
+binary             = true
+
+[ "{README,INSTALL,LICENSE,TODO}" ]
+fileType           = "text.plain"
