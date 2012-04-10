@@ -1,11 +1,9 @@
-EDITOR='mate -w'
-LESSEDIT='mate -l %lm %f'
-TEXEDIT='mate -w -l %d "%s"'
-# MACOSX_DEPLOYMENT_TARGET=10.7
-# CFLAGS="-arch i386 -arch x86_64"
-# ARCHFLAGS="-arch i386 -arch x86_64"
-PATH=$PATH:/usr/local/hdf5/bin
-
+EDITOR='subl -w'
+R_HOME=/Library/Frameworks/R.framework/Resources
+PYTHONPATH=$PYTHONPATH:/usr/local/lib/python2.7/site-packages
+PATH=$PATH:/usr/texbin:$R_HOME/bin/:~/Code/julia
+TEXINPUTS=${TEXINPUTS}://Library/Frameworks/R.framework/Versions/2.14/Resources/share/texmf/tex/latex
+OMP_NUM_THREADS=4
 
 function parse_git_dirty {
   [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
@@ -39,4 +37,4 @@ PS1="${CYAN}\h:\w\n${WHITE}[\!] ${YELLOW}\$(date +%I:%M:%S) \u${WHITE}:${CYAN}\$
 
 alias ipy='ipython qtconsole --pylab=inline'
 
-export EDITOR LESSEDIT TEXEDIT PS1 GIT_PS1_SHOWDIRTYSTATE PATH #MACOSX_DEPLOYMENT_TARGET CFLAGS ARCHFLAGS
+export EDITOR R_HOME PS1 GIT_PS1_SHOWDIRTYSTATE PATH TEXINPUTS PYTHONPATH OMP_NUM_THREADS
