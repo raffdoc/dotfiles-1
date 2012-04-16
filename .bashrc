@@ -1,6 +1,4 @@
-EDITOR='subl -w'
 R_HOME=/Library/Frameworks/R.framework/Resources
-PYTHONPATH=$PYTHONPATH:/usr/local/lib/python2.7/site-packages
 PATH=$PATH:/usr/texbin:$R_HOME/bin/:~/Code/julia
 TEXINPUTS=${TEXINPUTS}://Library/Frameworks/R.framework/Versions/2.14/Resources/share/texmf/tex/latex
 OMP_NUM_THREADS=4
@@ -37,4 +35,4 @@ PS1="${CYAN}\h:\w\n${WHITE}[\!] ${YELLOW}\$(date +%I:%M:%S) \u${WHITE}:${CYAN}\$
 
 alias ipy='ipython qtconsole --pylab=inline'
 
-export EDITOR R_HOME PS1 GIT_PS1_SHOWDIRTYSTATE PATH TEXINPUTS PYTHONPATH OMP_NUM_THREADS
+export R_HOME PS1 GIT_PS1_SHOWDIRTYSTATE PATH TEXINPUTS OMP_NUM_THREADS
