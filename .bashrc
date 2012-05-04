@@ -1,7 +1,9 @@
-R_HOME=/Library/Frameworks/R.framework/Resources
-PATH=$PATH:/usr/texbin:$R_HOME/bin/:~/Code/julia
-TEXINPUTS=${TEXINPUTS}://Library/Frameworks/R.framework/Versions/2.14/Resources/share/texmf/tex/latex
-OMP_NUM_THREADS=4
+export R_HOME=/Library/Frameworks/R.framework/Resources
+export R_HISTFILE=~/.Rhistory
+export PATH=/usr/local/bin:${PATH/\/usr\/local\/bin:/}
+export PATH=$PATH:/usr/texbin:$R_HOME/bin/:~/Code/julia
+export TEXINPUTS=${TEXINPUTS}://Library/Frameworks/R.framework/Versions/2.14/Resources/share/texmf/tex/latex
+export OMP_NUM_THREADS=4
 
 function parse_git_dirty {
   [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
@@ -31,8 +33,6 @@ function parse_git_branch {
 
 ### PROMPT ###
 #PS1="${LIGHT_GRAY}[${YELLOW}\$(date +%I:%M:%S) \u ${WHITE}\w${LIGHT_GRAY}]${YELLOW}\$${NO_COLOR} \[\033]0;\u \w\007\]"
-PS1="${CYAN}\h:\w\n${WHITE}[\!] ${YELLOW}\$(date +%I:%M:%S) \u${WHITE}:${CYAN}\$(parse_git_branch) ${NO_COLOR}\$ "
+export PS1="${CYAN}\h:\w\n${WHITE}[\!] ${YELLOW}\$(date +%I:%M:%S) \u${WHITE}:${CYAN}\$(parse_git_branch) ${NO_COLOR}\$ "
 
-alias ipy='ipython qtconsole --pylab=inline'
-
-export R_HOME PS1 GIT_PS1_SHOWDIRTYSTATE PATH TEXINPUTS OMP_NUM_THREADS
+alias ipy='ipython notebook --pylab=inline'
