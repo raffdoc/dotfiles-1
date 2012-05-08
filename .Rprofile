@@ -2,6 +2,7 @@
     library(ggplot2)
     options("device" = "quartz")
     options("repos" = c(CRAN = "http://cran.r-project.org/"))
+    options("editor" = "/usr/local/bin/vim")
 }
 
 .Last <- function () {

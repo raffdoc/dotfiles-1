@@ -1,7 +1,8 @@
 export R_HOME=/Library/Frameworks/R.framework/Resources
 export R_HISTFILE=~/.Rhistory
+export CUDA_ROOT=/usr/local/cuda
 export PATH=/usr/local/bin:${PATH/\/usr\/local\/bin:/}
-export PATH=$PATH:/usr/texbin:$R_HOME/bin/:~/Code/julia
+export PATH=$PATH:/usr/texbin:$R_HOME/bin/:~/Code/julia:$CUDA_ROOT/bin
 export TEXINPUTS=${TEXINPUTS}://Library/Frameworks/R.framework/Versions/2.14/Resources/share/texmf/tex/latex
 export OMP_NUM_THREADS=4
 
