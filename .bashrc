@@ -1,10 +1,16 @@
 export R_HOME=/Library/Frameworks/R.framework/Resources
 export R_HISTFILE=~/.Rhistory
-export CUDA_ROOT=/usr/local/cuda
-export PATH=/usr/local/bin:${PATH/\/usr\/local\/bin:/}
-export PATH=$PATH:/usr/texbin:$R_HOME/bin/:~/Code/julia:$CUDA_ROOT/bin
+export PATH=/usr/local/bin:${PATH}
+export PATH=$PATH:/usr/texbin:$R_HOME/bin/:~/Code/julia
 export TEXINPUTS=${TEXINPUTS}://Library/Frameworks/R.framework/Versions/2.14/Resources/share/texmf/tex/latex
 export OMP_NUM_THREADS=4
+export DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer
+export EDITOR='mate -w'
+# When TeX gives an error message relating to a file, you can enter e to edit the file
+export TEXEDIT='mate -w -l %d "%s"'
+# The less pager supports editing the file being viewed by pressing v.
+export LESSEDIT='mate -l %lm %f'
+export GIT_EDITOR="mate --name 'Git Commit Message' -w -l 1"
 
 function parse_git_dirty {
   [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
@@ -33,7 +39,6 @@ function parse_git_branch {
      NO_COLOR="\[\e[0m\]"
 
 ### PROMPT ###
-#PS1="${LIGHT_GRAY}[${YELLOW}\$(date +%I:%M:%S) \u ${WHITE}\w${LIGHT_GRAY}]${YELLOW}\$${NO_COLOR} \[\033]0;\u \w\007\]"
 export PS1="${CYAN}\h:\w\n${WHITE}[\!] ${YELLOW}\$(date +%I:%M:%S) \u${WHITE}:${CYAN}\$(parse_git_branch) ${NO_COLOR}\$ "
 
 alias ipy='ipython notebook --pylab=inline'
