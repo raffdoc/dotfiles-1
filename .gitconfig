@@ -1,5 +1,5 @@
 [user]
-	name = Chris Fonnesbeck
+	name = Christopher Fonnesbeck
 	email = chris.fonnesbeck@vanderbilt.edu
     
 [color]
@@ -7,6 +7,7 @@
 
 [core]
 	excludesfile = /Users/fonnescj/.gitignore_global
+	editor = subl -w
 
 [alias]
     co = checkout

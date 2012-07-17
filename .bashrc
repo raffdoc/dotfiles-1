@@ -1,16 +1,16 @@
 export R_HOME=/Library/Frameworks/R.framework/Resources
 export R_HISTFILE=~/.Rhistory
 export PATH=/usr/local/bin:${PATH}
-export PATH=$PATH:/usr/texbin:$R_HOME/bin/:~/Code/julia
+export PATH=$PATH:/usr/texbin:$R_HOME/bin/:~/Code/julia:/usr/local/texlive/2011/texmf-dist/scripts/pythontex
 export TEXINPUTS=${TEXINPUTS}://Library/Frameworks/R.framework/Versions/2.14/Resources/share/texmf/tex/latex
 export OMP_NUM_THREADS=4
 export DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer
-export EDITOR='mate -w'
+export EDIT='subl -w'
 # When TeX gives an error message relating to a file, you can enter e to edit the file
-export TEXEDIT='mate -w -l %d "%s"'
+export TEXEDIT='subl -w -l %d "%s"'
 # The less pager supports editing the file being viewed by pressing v.
-export LESSEDIT='mate -l %lm %f'
-export GIT_EDITOR="mate --name 'Git Commit Message' -w -l 1"
+export LESSEDIT='subl -l %lm %f'
+# export GIT_EDITOR="mate --name 'Git Commit Message' -w -l 1"
 
 function parse_git_dirty {
   [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"

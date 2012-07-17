@@ -1,6 +1,7 @@
 # Universal settings
 fontName           = "Inconsolata" 
-fontSize           = 14 
+fontSize           = 18 
+lineHighlight      = '#FFFBD1';
 
 softWrap           = true
 tabSize            = 4 
@@ -9,6 +10,8 @@ softTabs           = true
 excludeFiles       = "*.{so,pyc,o}" 
 excludeDirectories = "{build,dist,*.egg-info}"
 includeFiles       = ".gitignore"
+
+spellChecking      = true
 
 TM_GIT             = "/usr/local/git/bin/git"
 
