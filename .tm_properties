@@ -1,9 +1,10 @@
 # Universal settings
-fontName           = "Inconsolata" 
-fontSize           = 18 
+fontName           = "Source Code Pro" 
+fontSize           = 16
 lineHighlight      = '#FFFBD1';
 
 softWrap           = true
+wrapColumn         = "Use Window Frame"
 tabSize            = 4 
 softTabs           = true 
 
@@ -13,13 +14,19 @@ includeFiles       = ".gitignore"
 
 spellChecking      = true
 
-TM_GIT             = "/usr/local/git/bin/git"
+TM_GIT             = "/usr/local/bin/git"
 
-PATH               = "$PATH:/usr/local/git/bin:/usr/texbin"
+PATH               = "$PATH:/usr/texbin"
+
+# Add Git info in window title
+windowTitleSCM     = '${TM_SCM_BRANCH:+ ($TM_SCM_NAME: $TM_SCM_BRANCH)}'
+windowTitle        = '$TM_DISPLAYNAME$windowTitleSCM'
 
 # File-specific configurations
 [ source.python ]
-TM_PYCHECKER       = pylint
+TM_PYCHECKER       = pep8
+spellChecking      = false
+TM_PYCHECKER       = /usr/local/bin/pep8
 
 [ .git/COMMIT_EDITMSG ]
 spellChecking      = true

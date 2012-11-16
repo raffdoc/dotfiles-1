@@ -1,7 +1,7 @@
 export R_HOME=/Library/Frameworks/R.framework/Resources
 export R_HISTFILE=~/.Rhistory
 export PATH=/usr/local/bin:${PATH}
-export PATH=$PATH:/usr/texbin:$R_HOME/bin/:~/Code/julia:/usr/local/texlive/2011/texmf-dist/scripts/pythontex
+export PATH=$PATH:/usr/texbin:$R_HOME/bin:~/Code/julia:/usr/local/texlive/2011/texmf-dist/scripts/pythontex
 export TEXINPUTS=${TEXINPUTS}://Library/Frameworks/R.framework/Versions/2.14/Resources/share/texmf/tex/latex
 export OMP_NUM_THREADS=4
 export DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer
@@ -42,3 +42,4 @@ function parse_git_branch {
 export PS1="${CYAN}\h:\w\n${WHITE}[\!] ${YELLOW}\$(date +%I:%M:%S) \u${WHITE}:${CYAN}\$(parse_git_branch) ${NO_COLOR}\$ "
 
 alias ipy='ipython notebook --pylab=inline'
+alias r='r --vanilla'

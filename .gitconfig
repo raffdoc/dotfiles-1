@@ -7,11 +7,19 @@
 
 [core]
 	excludesfile = /Users/fonnescj/.gitignore_global
-	editor = subl -w
+	editor = mate -w
 
 [alias]
     co = checkout
     hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	switch = !legit switch \"$@\"
+	branches = !legit branches
+	sprout = !legit sprout \"$@\"
+	unpublish = !legit unpublish \"$@\"
+	harvest = !legit harvest \"$@\"
+	sync = !legit sync \"$@\"
+	publish = !legit publish \"$@\"
+	graft = !legit graft \"$@\"
 
 
 [difftool "sourcetree"]
@@ -20,3 +28,5 @@
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+[push]
+	default = simple

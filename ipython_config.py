@@ -194,7 +194,7 @@ c = get_config()
 # c.TerminalInteractiveShell.screen_length = 0
 
 # Set the editor used by IPython (default to $EDITOR/vi/notepad).
-# c.TerminalInteractiveShell.editor = 'vi'
+c.TerminalInteractiveShell.editor = 'subl'
 
 # Deprecated, use PromptManager.justify
 # c.TerminalInteractiveShell.prompts_pad_left = True
